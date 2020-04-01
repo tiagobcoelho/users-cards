@@ -39,7 +39,7 @@ class App extends Component {
             email={user.email}
             phone={user.phone}
             />
-        ))};
+        ))}
         </div>
       );
     }
