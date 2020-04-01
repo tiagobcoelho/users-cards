@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Cards from './components/Cards';
 import './App.css'
+import AddCard from './components/AddCard';
 
 
 class App extends Component {
@@ -28,9 +29,15 @@ class App extends Component {
     let usr = this.state.users.filter( p => 
       p.name !== name
     )
-    console.log(usr)
     this.setState({users: usr})
   }
+
+  addUser = (user) =>{
+    let newUsr = this.state.users.push(user)
+    console.log(newUsr)
+    this.setState({users: newUsr})
+  }
+
   
   render(){
     const { users, loaded } = this.state;
@@ -39,6 +46,7 @@ class App extends Component {
     }else{
       return (
         <div className="App">
+          <AddCard addUser={this.addUser} />
           {users.map(user => (
             <Cards 
             key={user.id}
