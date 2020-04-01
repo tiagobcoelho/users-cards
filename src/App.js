@@ -23,6 +23,14 @@ class App extends Component {
               })
       });
   }
+
+  removeCard =(name) => {
+    let usr = this.state.users.filter( p => 
+      p.name !== name
+    )
+    console.log(usr)
+    this.setState({users: usr})
+  }
   
   render(){
     const { users, loaded } = this.state;
@@ -38,6 +46,7 @@ class App extends Component {
             location={user.address.city}
             email={user.email}
             phone={user.phone}
+            removeCard={this.removeCard}
             />
         ))}
         </div>
