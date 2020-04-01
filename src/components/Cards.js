@@ -27,15 +27,15 @@ class Cards extends Component {
                         <h4 className='user-name'>{name}</h4>
                     </div>
                     <div className='user-section-wrapper'>
-                        <button><MdLocationOn className='icon'/></button>
+                        <button className='button-icon'><MdLocationOn className='icon'/></button>
                         <p className='user-location'>{location}</p>
                     </div>
                     <div className='user-section-wrapper'>
-                        <button><MdEmail className='icon' /></button>
+                        <button className='button-icon'><MdEmail className='icon' /></button>
                         <p className='user-email'>{email}</p>
                     </div>
                     <div className='user-section-wrapper'>
-                        <button><FaPhone className='icon' /></button>
+                        <button className='button-icon'><FaPhone className='icon' /></button>
                         <p className='user-phone'>{phone}</p> 
                     </div>
                 </div>

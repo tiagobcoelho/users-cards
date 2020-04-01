@@ -26,16 +26,16 @@ class App extends Component {
   }
 
   removeCard =(name) => {
-    let usr = this.state.users.filter( p => 
-      p.name !== name
+    let usr = this.state.users.filter( user => 
+      user.name !== name
     )
     this.setState({users: usr})
   }
 
   addUser = (user) =>{
-    let newUsr = this.state.users.push(user)
-    console.log(newUsr)
-    this.setState({users: newUsr})
+    let users = [user,...this.state.users]
+    console.log(users)
+    this.setState({ users })
   }
 
   
