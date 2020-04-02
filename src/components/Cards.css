@@ -1,6 +1,10 @@
+
+/*** CARDS ***/
+
 .cards{
     position: relative;
-    width: 280px;
+    width: 300px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,9 +17,12 @@
         5px 5px 5px rgb(163,177,198,0.6);
     transition: .3s ease-in-out;
 }
+.cards-none{
+    display: none;
+}
 
 .cards:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .cards h4{
@@ -47,16 +54,31 @@
     color: #A3B1C6;
 }
 
+.edit{
+    font-size: 1.4em;
+    position: absolute;
+    top: 20px;
+    left:20px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.edit:hover{
+    transform: scale(1.2);
+    color: #E33E49;
+}
+
 .delete{
     font-size: 1.8em;
     position: absolute;
     top: 20px;
     right:20px;
     cursor: pointer;
-    transition: .2s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 .delete:hover{
     transform: scale(1.2);
+    color: #E33E49;
 }
 
 
@@ -85,4 +107,103 @@
     box-shadow:
     -5px -5px 8px rgba(255, 255, 255, .5),
     5px 5px 8px rgb(163,177,198,0.6);
+}
+
+/*** NEW CARD/EDIT CARD FORM ***/
+
+.sign-up-container{
+    position: relative;
+    width: 300px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 20px;
+    padding: 20px 20px;
+    border-radius: 1em;
+    box-shadow:
+        -5px -5px 5px rgba(255, 255, 255, .5),
+        5px 5px 5px rgb(163,177,198,0.6);
+}
+
+.sign-up-container-none{
+    display: none;
+}
+
+.sign-up-title{
+    font-family: roboto;
+    font-size: 1.5em;
+    color: #A3B1C6;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .1) ;
+}
+
+.form-input{
+    width: 80%;
+    margin: 15px 0;
+    background-color:#E0E5EC;
+    color: #A3B1C6;
+    border: none;
+    font-size: 1.3em;
+    border-radius: 10px;
+    outline: none;
+    padding: 15px 10px;
+    box-shadow:
+    -5px -5px 8px rgba(255, 255, 255, .5),
+    5px 5px 8px rgb(163,177,198,0.6);
+    transition: .2s ease-in-out;
+}
+.form-input:focus{
+    transform: scale(1.1);
+}
+
+.form-input::placeholder{
+    color: #A3B1C6;
+}
+
+.btn-enabled{
+    margin: 10px 0;
+    padding: 12px 40px;
+    background-color: #E0E5EC;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    box-shadow:
+    -5px -5px 8px rgba(255, 255, 255, .5),
+    5px 5px 8px rgb(163,177,198,0.6);
+    transform: scale(1.1);
+    transition: all .3s ease-in-out;
+}
+
+.btn-enabled:hover{
+    transform: scale(1.2);
+}
+
+.btn-disabled{
+    padding: 12px 40px;
+    background-color: #E0E5EC;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    box-shadow:
+    -5px -5px 8px rgba(255, 255, 255, .5),
+    5px 5px 8px rgb(163,177,198,0.6);
+    transition: all .3s ease-in-out;
+}
+
+
+.icon-disabled{
+    font-size: 3em;
+    text-align: center;
+    vertical-align: middle;
+    color: #A3B1C6;
+}
+
+.icon-enabled{
+    font-size: 3em;
+    text-align: center;
+    vertical-align: middle;
+    color: #E33E49;
+    transition: .3s ease-in-out;
 }

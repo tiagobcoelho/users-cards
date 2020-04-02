@@ -10,8 +10,8 @@ class App extends Component {
     this.state = {
         users: [],
         loaded: false,
-    }
-  }
+    };
+  };
 
   componentDidMount() {
       const url = "https://jsonplaceholder.typicode.com/users";
@@ -21,28 +21,33 @@ class App extends Component {
               this.setState({
                   loaded: true,
                   users: json,
-              })
+              });
       });
-  }
+  };
 
   removeCard =(name) => {
-    let usr = this.state.users.filter( user => 
+    const usr = this.state.users.filter( user => 
       user.name !== name
     )
-    this.setState({users: usr})
-  }
+    this.setState({ users: usr });
+  };
 
   addUser = (user) =>{
-    let users = [user,...this.state.users]
-    console.log(users)
-    this.setState({ users })
-  }
+    const users = [user,...this.state.users];
+    this.setState({ users });
+  };
 
+  updateUser = (user) => {
+    const newUsers = [...this.state.users];
+    const i = newUsers.findIndex(usr => user.id === usr.id);
+    newUsers.splice(i,1,user);
+    this.setState({ users: newUsers });
+  }
   
   render(){
     const { users, loaded } = this.state;
     if(!loaded){
-      return <div>Loading...</div>
+      return <div id='loading'><h2>Loading...</h2></div>
     }else{
       return (
         <div className="App">
@@ -50,17 +55,19 @@ class App extends Component {
           {users.map(user => (
             <Cards 
             key={user.id}
+            id={user.id}
             name={user.name}
             location={user.address.city}
             email={user.email}
             phone={user.phone}
             removeCard={this.removeCard}
+            updateUser={this.updateUser}
             />
         ))}
         </div>
       );
-    }
-  }
-}
+    };
+  };
+};
 
 export default App;
