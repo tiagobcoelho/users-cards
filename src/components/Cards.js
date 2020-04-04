@@ -78,7 +78,7 @@ class Cards extends Component {
         const errors = validate(this.state.name, this.state.address, this.state.email, this.state.phone);
         let isDisabled = Object.keys(errors).some(x => errors[x]);
             return (
-                <div>
+                <div className='container'>
                     <div className={editMode? 'cards-none':'cards'}>
                         <FaEdit onClick={this.editUser} className='icon edit'/>
                         <TiDelete onClick={this.removeCard} className='icon delete'/>

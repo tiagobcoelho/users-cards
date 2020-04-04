@@ -1,7 +1,5 @@
 
-/*** CARDS ***/
-
-.cards{
+.container{
     position: relative;
     width: 300px;
     height: 500px;
@@ -17,12 +15,15 @@
         5px 5px 5px rgb(163,177,198,0.6);
     transition: .3s ease-in-out;
 }
-.cards-none{
-    display: none;
+
+.container:hover{
+    transform: scale(1.05);
 }
 
-.cards:hover {
-    transform: scale(1.05);
+/*** CARDS ***/
+
+.cards-none{
+    display: none;
 }
 
 .cards h4{
@@ -125,6 +126,7 @@
     box-shadow:
         -5px -5px 5px rgba(255, 255, 255, .5),
         5px 5px 5px rgb(163,177,198,0.6);
+    transition: .3s ease-in-out;
 }
 
 .sign-up-container-none{
