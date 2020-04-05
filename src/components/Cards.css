@@ -26,15 +26,17 @@
     display: none;
 }
 
-.cards h4{
+.user-name{
     font-family: roboto;
     font-size: 1.5em;
     color: #A3B1C6;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, .1) ;
+    transition: all .3s ease-in-out;
 }
-.cards p{
+.user-info{
     font-family: roboto;
     color: #A3B1C6;
+    transition: .2s ease-in-out;
 }
 
 .user-icon{
@@ -46,6 +48,11 @@
     box-shadow:
         -8px -8px 10px rgba(255, 255, 255, .5),
         8px 8px 10px rgb(163,177,198,0.6);
+}
+
+.user-icon:hover ~ .user-name {
+    transform: scale(1.1);
+    color: #E33E49;
 }
 
 .icon{
@@ -108,6 +115,13 @@
     box-shadow:
     -5px -5px 8px rgba(255, 255, 255, .5),
     5px 5px 8px rgb(163,177,198,0.6);
+
+}
+
+.button-icon:hover ~ .user-info{
+    transform: scale(1.1);
+    color: #E33E49;
+    margin-left: 5px;
 }
 
 /*** NEW CARD/EDIT CARD FORM ***/

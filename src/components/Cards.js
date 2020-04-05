@@ -88,15 +88,15 @@ class Cards extends Component {
                         </div>
                         <div className='user-section-wrapper'>
                             <button className='button-icon'><MdLocationOn className='icon'/></button>
-                            <p className='user-location'>{location}</p>
+                            <p className='user-info'>{location}</p>
                         </div>
                         <div className='user-section-wrapper'>
                             <button className='button-icon'><MdEmail className='icon' /></button>
-                            <p className='user-email'>{email}</p>
+                            <p className='user-info'>{email}</p>
                         </div>
                         <div className='user-section-wrapper'>
                             <button className='button-icon'><FaPhone className='icon' /></  button>
-                            <p className='user-phone'>{phone}</p> 
+                            <p className='user-info'>{phone}</p> 
                         </div>
                     </div>
             
